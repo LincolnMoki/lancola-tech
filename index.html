@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lancolatech</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="shortcut icon" href="./assets/tracosDamatta.webp" type="image/x-icon">
+    <style>
+       /* Ensure body and html take full viewport height and remove any margin or padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header#home {
+    position: relative; /* Set relative positioning to contain absolute children */
+    height: 100vh; /* Adjust this height to fit your design */
+    overflow: hidden;
+}
+
+/* Slider styling */
+.slider {
+    position: absolute; /* Position absolutely within the header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Fill the header height */
+    z-index: -1; /* Place it behind the content */
+}
+
+.slider .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    animation: slide 10s infinite;
+}
+
+.slider .slide:nth-child(1) {
+    background-image: url('./assets/ROP.jpg');
+    animation-delay: 0s;
+}
+
+.slider .slide:nth-child(2) {
+    background-image: url('./assets/ROP1.jpg');
+    animation-delay: 2s;
+}
+
+.slider .slide:nth-child(3) {
+    background-image: url('./assets/ROP2.jpg');
+    animation-delay: 4s;
+}
+
+.slider .slide:nth-child(4) {
+    background-image: url('./assets/ROP3.jpg');
+    animation-delay: 6s;
+}
+
+.slider .slide:nth-child(5) {
+    background-image: url('./assets/ROP4.jpg');
+    animation-delay: 8s;
+}
+
+/* Keyframes for slide animation */
+@keyframes slide {
+    0%, 20% { opacity: 1; }
+    25%, 95% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+    </style>
+</head>
+<body>
+
+    <nav id="navigation" class="">
+
+        <div class="wrapper">
+
+            <a class="logo" href="#home">
+                <img src="https://res.cloudinary.com/lancolatech/images/c_scale,w_300,h_82/f_auto,q_auto/v1691053926/lancola-logo-2_174a5676/lancola-logo-2_174a5676.png?_i=AA" alt="">
+            </a>
+            
+            <div class="menu">
+                <ul>
+                    <li><a onclick="closeMenu()" href="#home">Home</a></li>
+                    <li><a onclick="closeMenu()" href="#sobre">About us</a></li>
+                    <li><a onclick="closeMenu()" href="#suporte">Pricing</a></li>
+                    <li><a onclick="closeMenu()" href="#services">Serviçes</a></li>
+                    <li><a onclick="closeMenu()" href="#suporte">Blogs</a></li>
+                    <li><a onclick="closeMenu()" href="#suporte">Careers</a></li>
+                    <li><a onclick="closeMenu()" href="#suporte">Contact</a></li>
+                    
+                </ul>
+
+                <a href="#home"><img class="logo" onclick="closeMenu()" src="https://res.cloudinary.com/lancolatech/images/c_scale,w_300,h_82/f_auto,q_auto/v1691053926/lancola-logo-2_174a5676/lancola-logo-2_174a5676.png?_i=AA" alt=""></a>
+             </div>
+
+            <button 
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            onclick="openMenu()" 
+            class="open-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20H30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 12H30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 28L30 28" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            </button>
+            <button
+            aria-expanded="true"
+            aria-label="Fechar menu"
+            onclick="closeMenu()" 
+            class="close-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+            </button>
+
+        </div>
+           
+    </nav>
+
+    <header id="home">
+        <!-- <div class="video">
+            <video autoplay muted loop>
+                <source src="./assets/456055_Bangkok_Thailand_1280x720.mp4" type="video/mp4">
+            </video>
+        </div> -->
+        
+        <div class="wrapper">
+            <div class="content">
+                <div class="text">
+
+                    <div class="text-content">
+                        <img data-aos="fade-up-left" class="logo" src="./assets/tracosDamatta.webp" alt="">
+                        <h1 data-aos="fade-up-left">We bring great Ideas to life.</h1>
+                        <p data-aos="fade-up-left">We run all kinds of IT services that vow your success, <span> reach out and get to enjoys our services</span>.</p>
+                        <div data-aos="fade-up-left" class="buttons">
+                            <a href="#services"><button>Have a look at our serviçe</button></a>
+                            <a href="#suporte"><button>Support</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                </div>
+                
+            </div>
+        </div>
+
+    </header>
+
+    <section id="servicesDesktop">
+        <div class="wrapper">
+            <div class="content">
+                <header data-aos="fade-up">
+                    <span class="span">SERVICES</span>
+                    <h2>We offer a wide range of services  <span>providing you with easy-to-use tools for all your work structures.</span>, here are some of our products:</h2>
+                </header>
+
+                <div data-aos="fade-up"
+                data-aos-duration="3000" class="container">
+                    <div class="box">
+                        <h3>Maziwa Tele</h3>
+                        <div class="additional-content">
+                            <p>Soluções técnicas e inovadoras para projetos de construção e infraestrutura</p>
+                            <a href="#service-um"><button>Veja mais</button></a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h3>Lancola Host</h3>
+                        <div class="additional-content">
+                            <p>Disponibilização de equipamentos robustos e eficientes para diversas obras e projetos.</p>
+                            <a href="#service-dois"><button>Veja mais</button></a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h3>Point of sale (c-pos)</h3>
+                        <div class="additional-content">
+                            <p>Implementação de sistemas de energia solar para uma fonte sustentável e renovável de eletricidade.</p>
+                            <a href="#service-tres"><button>Veja mais</button></a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h3>Edu-erp</h3>
+                        <div class="additional-content">
+                            <p>Preparação do terreno para projetos de construção, nivelando e estabilizando o solo para criar uma base sólida e adequada.</p>
+                            <a href="#service-quatro"><button>Veja mais</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <img class="icone" src="./assets/tracosDamatta.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="wrapper">
+            <div class="content">
+                <header data-aos="fade-up">
+                    <span class="span">SERVICES</span>
+                    <h2>Operamos em várias <span>áreas de infraestrutura</span>, tais como:</h2>
+                </header>
+
+                <div class="cards">
+                    <img class="iconeDamatta" src="./assets/iconeTdamatta.svg" alt="">
+                    <div data-aos="fade-up-left" class="card">
+                        <h3>Serviços de engenharia</h3>
+                        <p>Soluções técnicas e inovadoras para projetos de construção e infraestrutura.</p>
+                        <a href="#service-um">Veja mais <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    </div>
+
+                    <div data-aos="fade-up-left" class="card">
+                        <h3>Locação de máquinas pesadas</h3>
+                        <p> Disponibilização de equipamentos robustos e eficientes para diversas obras e projetos.</p>
+                        <a href="#service-dois">Veja mais <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    </div>
+
+                    <div data-aos="fade-up-left" class="card">
+                        <h3>Construção de usinas fotovoltaicas</h3>
+                        <p>Implementação de sistemas de energia solar para uma fonte sustentável e renovável de eletricidade.</p>
+                        <a href="#service-tres">Veja mais <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    </div>
+
+                    <div data-aos="fade-up-left" class="card">
+                        <h3>Serviços de Terraplanagem</h3>
+                        <p>Preparação do terreno para projetos de construção, nivelando e estabilizando o solo para criar uma base sólida e adequada.</p>
+                        <a href="#service-quatro">Veja mais <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="service-um" class="topic">
+        <div class="content">
+                <div class="wrapper">
+                    <div class="text">
+                        <h2 data-aos="fade-up-right">Engenharia <span>do</span> proprietário</h2>
+                        <h3 data-aos="fade-up-right">A Engenharia do Proprietário é uma <span>abordagem estratégica</span> que visa representar os interesses do cliente durante <span>todo o ciclo de vida do projeto</span>. Nossos Serviços de Engenharia do Proprietário Incluem:</h3>
+
+                        <div data-aos="fade-up-right" class="topics">
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Planejamento e Viabilidade</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Gestão de Projetos </p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Gestão de Contratos</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Controle de Qualidade</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Gestão de Custos</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Sustentabilidade e Conformidade Ambiental</p>
+                        </div>
+
+                        <div data-aos="fade-up-right"  class="button">
+                            <a target="_blank" href="https://wa.link/x0f801"><button>Solicite um orçamento</button></a>
+                        </div>
+                    </div>
+                </div>
+
+            <div data-aos="fade-left" class="image">
+                <img src="./assets/Maziwa.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="service-dois" class="topic">
+        <div class="content">
+                <div class="wrapper">
+                    <div class="text">
+                        <h2 data-aos="fade-up-left">Locação <span>de</span> máquinas pesadas</h2>
+                        <h3 data-aos="fade-up-left">O <span>Grupo Damatta</span> oferece soluções completas em locação de máquinas, atendendo às necessidades de <span>diversos segmentos com flexibilidade e eficiência</span>. Nossa linha de equipamentos está disponível tanto com operadores experientes quanto sem operadores. <span>Nossa gama de equipamentos inclui</span>:</h3>
+
+                        <div data-aos="fade-up-left" class="topics">
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Escavadeiras</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Retroescavadeiras</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Pás carregadeiras</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Tratores</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Motoniveladores</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Compactadores</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Guindades</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> e muito mais...</p>
+                        </div>
+
+                        <div data-aos="fade-up-left" class="button">
+                            <a target="_blank" href="https://wa.link/x0f801"><button>Solicite um orçamento</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-right" class="image">
+                    <img src="./assets/servicosmaquinapesada.webp" alt="">
+                </div>
+        </div>
+    </section>
+
+    <section id="service-tres" class="topic">
+        <div class="content">
+                <div class="wrapper">
+                    <div class="text">
+                        <h2 data-aos="fade-up-right"><span>Usinas</span> fotovoltaicas</h2>
+                        <h3 data-aos="fade-up-right">O <span>Grupo Damatta</span> é especializado na concepção, desenvolvimento e implementação de usinas de energia solar, oferecendo <span>soluções inovadoras para um futuro mais sustentável</span>.
+                        Nos destacamos na implementação de usinas solares de grande porte, <span>proporcionando uma alternativa limpa e eficiente</span> para a geração de energia elétrica</h3>
+
+                        <div data-aos="fade-up-right" class="topics">
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Equipe altamente qualificada</p>
+                            <p> <ion-icon name="radio-button-on-outline"></ion-icon> Equipe altamente experiente</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Soluções personalizadas</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> Máxima eficiência</p>
+                            <p><ion-icon name="radio-button-on-outline"></ion-icon> e muito mais...</p>
+                        </div>
+
+                        <div data-aos="fade-up-right" class="button">
+                            <a target="_blank" href="https://wa.link/x0f801"><button>Solicite um orçamento</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="image">
+                    <img src="./assets/servicosusinasdamatta.webp" alt="">
+                </div>
+        </div>
+    </section>
+
+    <section id="service-quatro" class="topic">
+        <div class="content">
+                <div class="wrapper">
+                    <div class="text">
+                        <h2 data-aos="fade-up-left">Serviços <span>de</span> Terraplanagem</h2>
+                        <h3 data-aos="fade-up-left">Oferecemos serviços de terraplanagem que se destacam pela <span>excelência e compromisso com a qualidade</span>. Desde a preparação inicial do terreno até a conclusão do projeto, nossa equipe dedicada e experiente <span>garante que cada etapa seja realizada com precisão e eficiência</span>.</h3>
+
+                        <div data-aos="fade-up-left" class="topics">
+                            <p> <ion-icon name="radio-button-on-outline"></ion-icon>Preparação Profissional do Terreno</p>
+                            <p> <ion-icon name="radio-button-on-outline"></ion-icon>Equipamentos de Última Geração</p>
+                            <p> <ion-icon name="radio-button-on-outline"></ion-icon>Profissionais Especializados</p>
+                            <p> <ion-icon name="radio-button-on-outline"></ion-icon>Soluções Personalizadas</p>
+                        </div>
+
+                        <div data-aos="fade-up-left" class="button">
+                            <a target="_blank" href="https://wa.link/x0f801"><button>Solicite um orçamento</button></a>
+                        </div>
+                    </div>
+                </div>
+
+            <div data-aos="fade-right" class="image">
+                <img src="./assets/serviceterraplanagem.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="suporte">
+        <div class="wrapper">
+            <div class="content">
+                <div data-aos="fade-up-left" class="whatsapp">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+    
+                    <p>Receba suporte <span>diretamente pelo seu whatsapp.</span></p>
+                </div>
+    
+                <div data-aos="fade-up" class="image">
+                    <img src="./assets/bannerDamatta.webp" alt="">
+                </div>
+    
+                <div data-aos="fade-up-right" class="ajuda">
+                    <span><ion-icon name="flash-outline"></ion-icon> Suporte rápido</span>
+                    <h3>Precisa de <span>ajuda?</span></h3>
+                    <p>Nossa equipe <span>está pronta</span> para conversar com você!</p>
+                    <a target="_blank" href="https://wa.link/x0f801"><button>Entrar em contato</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="wrapper">
+            <div class="content">
+                <header data-aos="fade-up">
+                    <span class="span">Sobre</span>
+                    <h2>Conheça a nossa empresa</h2>
+                </header>
+
+                <div data-aos="fade-up-right" class="container">
+                    <div class="text">
+                        <h3>LANCOLATECH COMPANY</h3>
+                        <p>LANCOLATECH is a top-of-the line line of management systems provider, working as the primary tool to give you hope and happiness in your business. With our Management System, we provide you with easy-to-use tools for all your work structures.
+
+                            With one of the leading systems in the company, you can easily and quickly develop and integrate structuring within marketing, accounting or human resources. Our company is known for its outstanding performance in provision of C-POS, C-MED, C-DENT, C-EYE, C-FIRM, EDUU ERP management systems across the country.</span>.</p>
+                    </div>
+
+                    <div data-aos="fade-up-left" class="image">
+                        <img src="./assets/damattasobre.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clientes">
+        <div class="wrapper">
+            <div class="content">
+                <header>
+                    <span>CLIENTES</span>
+                    <h2>Meet our clients</h2>
+                </header>
+
+                <div class="slide um">
+                    <div class="slide-text">
+                      <img src="./assets/clientes/1.png" alt="">
+                      <img src="./assets/clientes/2.jpg" alt="">
+                      <img src="./assets/clientes/3.png" alt="">
+                      <img src="./assets/clientes/4.png" alt="">
+                      <img src="./assets/clientes/5.png" alt="">
+                      <img src="./assets/clientes/6.png" alt="">
+                      <img src="./assets/clientes/7.webp" alt="">
+                      <img src="./assets/clientes/8.webp" alt="">
+                      <img src="./assets/clientes/9.png" alt="">
+                      <img src="./assets/clientes/10.png" alt="">
+                      <img src="./assets/clientes/11.webp" alt="">
+                      <img src="./assets/clientes/12.png" alt="">
+                      <img src="./assets/clientes/13.jpg" alt="">
+                      <img src="./assets/clientes/14.png" alt="">
+                      <img src="./assets/clientes/15.png" alt="">
+                      <img src="./assets/clientes/16.png" alt="">
+                      <img src="./assets/clientes/17.webp" alt="">
+                      <img src="./assets/clientes/18.webp" alt="">
+                      <img src="./assets/clientes/19.png" alt="">
+                      <img src="./assets/clientes/20.png" alt="">
+                      <img src="./assets/clientes/21.webp" alt="">
+                    </div>
+                    <div class="slide-text">
+                        <img src="./assets/clientes/1.png" alt="">
+                      <img src="./assets/clientes/2.jpg" alt="">
+                      <img src="./assets/clientes/3.png" alt="">
+                      <img src="./assets/clientes/4.png" alt="">
+                      <img src="./assets/clientes/5.png" alt="">
+                      <img src="./assets/clientes/6.png" alt="">
+                      <img src="./assets/clientes/7.webp" alt="">
+                      <img src="./assets/clientes/8.webp" alt="">
+                      <img src="./assets/clientes/9.png" alt="">
+                      <img src="./assets/clientes/10.png" alt="">
+                      <img src="./assets/clientes/11.webp" alt="">
+                      <img src="./assets/clientes/12.png" alt="">
+                      <img src="./assets/clientes/13.jpg" alt="">
+                      <img src="./assets/clientes/14.png" alt="">
+                      <img src="./assets/clientes/15.png" alt="">
+                      <img src="./assets/clientes/16.png" alt="">
+                      <img src="./assets/clientes/17.webp" alt="">
+                      <img src="./assets/clientes/18.webp" alt="">
+                      <img src="./assets/clientes/19.png" alt="">
+                      <img src="./assets/clientes/20.png" alt="">
+                      <img src="./assets/clientes/21.webp" alt="">
+                      </div>
+                </div>
+                <div class="slide dois">
+                    <div class="slide-text">
+                        <img src="./assets/clientes/1.png" alt="">
+                      <img src="./assets/clientes/2.jpg" alt="">
+                      <img src="./assets/clientes/3.png" alt="">
+                      <img src="./assets/clientes/4.png" alt="">
+                      <img src="./assets/clientes/5.png" alt="">
+                      <img src="./assets/clientes/6.png" alt="">
+                      <img src="./assets/clientes/7.webp" alt="">
+                      <img src="./assets/clientes/8.webp" alt="">
+                      <img src="./assets/clientes/9.png" alt="">
+                      <img src="./assets/clientes/10.png" alt="">
+                      <img src="./assets/clientes/11.webp" alt="">
+                      <img src="./assets/clientes/12.png" alt="">
+                      <img src="./assets/clientes/13.jpg" alt="">
+                      <img src="./assets/clientes/14.png" alt="">
+                      <img src="./assets/clientes/15.png" alt="">
+                      <img src="./assets/clientes/16.png" alt="">
+                      <img src="./assets/clientes/17.webp" alt="">
+                      <img src="./assets/clientes/18.webp" alt="">
+                      <img src="./assets/clientes/19.png" alt="">
+                      <img src="./assets/clientes/20.png" alt="">
+                      <img src="./assets/clientes/21.webp" alt="">
+                      </div>
+                      <div class="slide-text">
+                        <img src="./assets/clientes/1.png" alt="">
+                        <img src="./assets/clientes/2.jpg" alt="">
+                        <img src="./assets/clientes/3.png" alt="">
+                        <img src="./assets/clientes/4.png" alt="">
+                        <img src="./assets/clientes/5.png" alt="">
+                        <img src="./assets/clientes/6.png" alt="">
+                        <img src="./assets/clientes/7.webp" alt="">
+                        <img src="./assets/clientes/8.webp" alt="">
+                        <img src="./assets/clientes/9.png" alt="">
+                        <img src="./assets/clientes/10.png" alt="">
+                        <img src="./assets/clientes/11.webp" alt="">
+                        <img src="./assets/clientes/12.png" alt="">
+                        <img src="./assets/clientes/13.jpg" alt="">
+                        <img src="./assets/clientes/14.png" alt="">
+                        <img src="./assets/clientes/15.png" alt="">
+                        <img src="./assets/clientes/16.png" alt="">
+                        <img src="./assets/clientes/17.webp" alt="">
+                        <img src="./assets/clientes/18.webp" alt="">
+                        <img src="./assets/clientes/19.png" alt="">
+                        <img src="./assets/clientes/20.png" alt="">
+                        <img src="./assets/clientes/21.webp" alt="">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="wrapper">
+            <div class="content">
+                <img class="logo" src="https://res.cloudinary.com/lancolatech/images/c_scale,w_300,h_82/f_auto,q_auto/v1691053926/lancola-logo-2_174a5676/lancola-logo-2_174a5676.png?_i=AA" alt="">
+
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <!-- <p><a href="#home">Home</a></p>
+                    <p><a href="#sobre">Sobre</a></p>
+                    <p><a href="#services">Serviços</a></p>
+                    <p><a href="#suporte">Pricing</a></p>
+                    <p><a href="#suporte">Contato</a></p>
+                    <p><a href="#suporte">Contato</a></p>
+                    <p><a href="#suporte">Contato</a></p>
+                    <p><a href="#suporte">Contato</a></p> -->
+                    <p><a onclick="closeMenu()" href="#home">Home</a></p>
+                    <p><a onclick="closeMenu()" href="#sobre">About us</a></p>
+                    <p><a onclick="closeMenu()" href="#suporte">Pricing</a></p>
+                    <p><a onclick="closeMenu()" href="#services">Serviçes</a></p>
+                    <p><a onclick="closeMenu()" href="#suporte">Blogs</a></p>
+                    <p><a onclick="closeMenu()" href="#suporte">Careers</a></p>
+                    <p><a onclick="closeMenu()" href="#suporte">Contact</a></p>
+                </div>
+    
+                <div class="contato">
+                    <h3>Connect with us</h3>
+                    <p>Eastern Avenue, Opp. Central Primary. <br> 
+                        Karen Mosque, Langata Road, Nairobi</p>
+                    <p>contato@construtoradamatta.com.br</p>
+                    <p>support@lancolatech.com</p>
+                    <p><a target="_blank" href="tel:+55-64-93442-2520">
+                        +254 115 588 872 <br>
+                        +254 715 223 428</a></p>
+                </div>
+    
+                <div class="redes-sociais">
+                    <h3>Our Socials</h3>
+                    <div class="icons">
+                        <a target="_blank" href="https://www.instagram.com/lancolatech/"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a target="_blank" href="https://www.tiktok.com/@lancolatech"><ion-icon name="logo-tiktok"></ion-icon></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/lancola-tech-company-ltd"><ion-icon name="logo-youtube"></ion-icon></a><br>
+                        <a target="_blank" href="https://www.linkedin.com/company/lancola-tech-company-ltd"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100077127077451"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a target="_blank" href="https://x.com/lancolatech"><ion-icon name="logo-twitter"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section id="author">
+        <div class="wrapper">
+            <div class="content">
+                <p>© All rights reserved - Copyright 2024</p>
+
+                <a target="_blank" href="https://instagram.com/gonzxgx">
+                    <p class="author">
+                        Designed by
+                        <img src="./assets/GustavoGonzaga Logo Small.svg" alt="">
+                        Lincoln@lancolatech.com
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                duration: 1500,
+            }
+        );
+      </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html> 
